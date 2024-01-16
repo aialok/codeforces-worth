@@ -90,7 +90,7 @@ function CodeforcesWorth() {
           </div>
         </div>
 
-        <div className="total-worth my-10">
+        <div className="total-worth my-5">
           <h1 className="text-3xl font-semibold text-center mt-2">3008.0💲 </h1>
           <h1 className="text-2xl font-normal text-center mt-2">
             Estimated Worth
