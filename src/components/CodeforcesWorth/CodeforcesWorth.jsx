@@ -31,7 +31,7 @@ function CodeforcesWorth() {
           backgroundColor: "#020817",
         },
       });
-      saveAs(blob, "codeforces-worth.png");
+      saveAs(blob, `codeforces-worth-${data.handle}.png`);
     } catch (err) {
       console.error("Error downloading image:", err);
     }
