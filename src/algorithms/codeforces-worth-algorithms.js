@@ -17,6 +17,18 @@ const RankWorth = {
   "legendary grandmaster": 256.0,
 };
 
+function formatMoney(amount) {
+  if (amount >= 1000000000) {
+    return (amount / 1000000000).toFixed(2) + 'B';
+  } else if (amount >= 1000000) {
+    return (amount / 1000000).toFixed(2) + 'M';
+  } else if (amount >= 1000) {
+    return (amount / 1000).toFixed(2) + 'K';
+  } else {
+    return amount.toFixed(2);
+  }
+}
+
 const codeforcesWorthAlgorithm = async (handle) => {
   const numberOfSubmissions = await getNumberOfSubmissions(handle);
   const numberOfContests = await getNumberOfContests(handle);
@@ -28,11 +40,11 @@ const codeforcesWorthAlgorithm = async (handle) => {
   const NumberOfContestsWorth = numberOfContests * 10;
   const questionsSolvedWorth = numberOfSubmissions * 4;
 
-  console.log(ratingWorth);
-  console.log(contributionWorth);
-  console.log(maxRating);
-  console.log(questionsSolvedWorth);
-  console.log(NumberOfContestsWorth);
+  // console.log(ratingWorth);
+  // console.log(contributionWorth);
+  // console.log(maxRating);
+  // console.log(questionsSolvedWorth);
+  // console.log(NumberOfContestsWorth);
 
   const totalWorth =
     ratingWorth +
@@ -41,7 +53,8 @@ const codeforcesWorthAlgorithm = async (handle) => {
     questionsSolvedWorth +
     NumberOfContestsWorth;
   console.log(totalWorth);
-  return totalWorth.toFixed(1);
+  const money = formatMoney(totalWorth);
+  return money;
 };
 
 // codeforcesWorthAlgorithm(handle);

@@ -7,14 +7,17 @@ function Navbar() {
   return (
     <nav className="bg-[#020817] p-4 border-b  border-slate-600">
       <div className="container mx-auto flex justify-between items-center">
+        <div className="text-white font-bold text-lg flex items-end gap-2 flex-col">
         <Link
           to="/"
-          className="text-white font-bold text-lg flex items-center gap-2"
+          
         >
-          <SiCodeforces className="text-5xl max-sm:text-3xl" />
-          <span className="ml-2 text-4xl max-sm:text-xl">Codeforces Worth</span>
+        
+          <span className="ml-2 text-4xl max-sm:text-xl flex items-center gap-2">  <SiCodeforces className="text-5xl max-sm:text-3xl" />Codeforces Worth</span>
+          
         </Link>
-
+        <span className="text-xs  ">Made with ❤️ by aialok</span>
+        </div>
         <div className="space-x-4 flex items-center">
           <Link
             to="/"

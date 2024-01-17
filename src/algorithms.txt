@@ -1,9 +1,0 @@
-Total No of Contest,
-Rank of contest,
-maxRank Badge,
-max Rating,
-Current Rating,
-contributions,
-friends,
-totalProblems solve,
-hacks
